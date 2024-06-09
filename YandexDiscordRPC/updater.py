@@ -9,7 +9,7 @@ from tkinter import ttk
 from threading import Thread
 
 # repo_url = "https://raw.githubusercontent.com/Maks1mio/YMusic-DRPC/beta/" * beta 
-repo_url = "https://raw.githubusercontent.com/Maks1mio/YMusic-DRPC/main/"
+repo_url = "https://raw.githubusercontent.com/YMusic-DRPC/tree/beta"
 local_path = "YandexDiscordRPC"
 version_file = os.path.join(local_path, "version.ini")
 
