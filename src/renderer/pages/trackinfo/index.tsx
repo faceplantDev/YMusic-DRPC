@@ -85,79 +85,81 @@ export default function TrackInfoPage() {
     return (
         <Layout title="Discord RPC">
             <div className={styles.page}>
-                <Container titleName={'Discord RPC'} imageName={'discord'}>
-                    <div className={styles.container}>
-                        <CheckboxNav checkType="startDiscordRpc">
-                            <MdVideogameAsset size={22} />
-                            Включить статус дискорд
-                        </CheckboxNav>
-                        <div className={theme.container}>
-                            {settings.discordRpc &&
-                            currentTrack !== trackInitials ? (
-                                <div className={theme.flex_container}>
-                                    <img
-                                        className={theme.img}
-                                        src={
-                                            currentTrack.requestImgTrack[1]
-                                                ? currentTrack
-                                                      .requestImgTrack[1]
-                                                : './static/assets/logo/logoappsummer.png'
-                                        }
-                                        alt=""
-                                    />
-                                    <div className={theme.gap}>
-                                        <div className={theme.yndex}>
-                                            Yandex Music
-                                        </div>
-                                        <div className={theme.name}>
-                                            {currentTrack.playerBarTitle} -{' '}
-                                            {currentTrack.artist}
-                                        </div>
-                                        <div className={theme.time}>
-                                            {currentTrack.timecodes[0]} -{' '}
-                                            {currentTrack.timecodes[1]}
+                <div className={styles.container}>
+                    <div className={styles.main_container}>
+                        <Container titleName={'Discord RPC'} imageName={'discord'}>
+                            <CheckboxNav checkType="startDiscordRpc">
+                                <MdVideogameAsset size={22} />
+                                Включить статус дискорд
+                            </CheckboxNav>
+                            <div className={theme.container}>
+                                {settings.discordRpc &&
+                                    currentTrack !== trackInitials ? (
+                                    <div className={theme.flex_container}>
+                                        <img
+                                            className={theme.img}
+                                            src={
+                                                currentTrack.requestImgTrack[1]
+                                                    ? currentTrack
+                                                        .requestImgTrack[1]
+                                                    : './static/assets/logo/logoappsummer.png'
+                                            }
+                                            alt=""
+                                        />
+                                        <div className={theme.gap}>
+                                            <div className={theme.yndex}>
+                                                Yandex Music
+                                            </div>
+                                            <div className={theme.name}>
+                                                {currentTrack.playerBarTitle} -{' '}
+                                                {currentTrack.artist}
+                                            </div>
+                                            <div className={theme.time}>
+                                                {currentTrack.timecodes[0]} -{' '}
+                                                {currentTrack.timecodes[1]}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ) : (
-                                <div>
-                                    <Skeleton width={300} height={30} />
-                                    <Skeleton
-                                        width={300}
-                                        height={20}
-                                        style={{ marginTop: '10px' }}
-                                    />
-                                </div>
-                            )}
+                                ) : (
+                                    <div>
+                                        <Skeleton width={300} height={30} />
+                                        <Skeleton
+                                            width={300}
+                                            height={20}
+                                            style={{ marginTop: '10px' }}
+                                        />
+                                    </div>
+                                )}
 
-                            <div className={theme.button}>
-                                Слушать трек на Яндекс Музыке
+                                <div className={theme.button}>
+                                    Слушать трек на Яндекс Музыке
+                                </div>
                             </div>
-                        </div>
-                        <CheckboxNav checkType="enableRpcButtonListen">
-                            <MdSmartButton size={22} />
-                            Включить кнопку (Слушать)
-                        </CheckboxNav>
-                        <button
-                            className={stylesBut.button}
-                            onClick={downloadTrack}
-                            disabled={
-                                user.perms !== 'developer' ||
-                                currentTrack === trackInitials ||
-                                currentTrack.id === ''
-                            }
-                        >
-                            <MdDownload size={22} />
-                            Скачать {currentTrack.playerBarTitle} -{' '}
-                            {currentTrack.artist} в папку музыка
-                        </button>
-                        <ButtonDefault disabled>
-                            <MdFolderOpen size={22} />
-                            Директория со скаченной музыкой
-                        </ButtonDefault>
+                            <CheckboxNav checkType="enableRpcButtonListen">
+                                <MdSmartButton size={22} />
+                                Включить кнопку (Слушать)
+                            </CheckboxNav>
+                            <button
+                                className={stylesBut.button}
+                                onClick={downloadTrack}
+                                disabled={
+                                    user.perms !== 'developer' ||
+                                    currentTrack === trackInitials ||
+                                    currentTrack.id === ''
+                                }
+                            >
+                                <MdDownload size={22} />
+                                Скачать {currentTrack.playerBarTitle} -{' '}
+                                {currentTrack.artist} в папку музыка
+                            </button>
+                            <ButtonDefault disabled>
+                                <MdFolderOpen size={22} />
+                                Директория со скаченной музыкой
+                            </ButtonDefault>
+                        </Container>
                     </div>
-                </Container>
+                </div>
             </div>
-        </Layout>
+        </Layout >
     )
 }

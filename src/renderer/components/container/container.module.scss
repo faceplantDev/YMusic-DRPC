@@ -5,6 +5,8 @@
     flex-direction: column;
     align-items: flex-start;
 
+    width: -webkit-fill-available;
+
     background: var(--color2);
     border-radius: var(--borderRadius);
     overflow: hidden;

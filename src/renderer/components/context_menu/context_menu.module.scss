@@ -1,51 +1,129 @@
 .patchMenu {
     position: absolute;
-    top: 40px;
-    left: 150px;
+    top: 52px;
     color: white;
-    overflow: hidden;
     z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: var(--bg);
-    border: 1px solid #525d64;
-    border-radius: var(--borderRadius);
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.25);
+    background: var(--Main);
+    outline: 1px solid var(--BorderColor);
+    border-radius: var(--BorderRadius);
 
-    button {
+    .innerFunction {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 12px 20px;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        text-align: center;
-        text-transform: uppercase;
-        background: transparent !important;
-        color: #89969e !important;
+        justify-content: space-between;
+        padding: 8px 20px;
+        color: white !important;
+
+        font-style: normal;
         width: -webkit-fill-available;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 140%;
+        color: #FFFFFF;
+
+        svg {
+            transform: rotate(0deg);
+            transition: cubic-bezier(0.05, 0.99, 0.05, 0.99) all 1.8s;
+        }
+
+        .showButtons {
+            display: none;
+        }
 
         &:disabled {
-            color: #89969e !important;
-            opacity: 0.3 !important;
+            opacity: 0.5 !important;
 
             &:hover {
                 background: transparent !important;
-                color: #89969e !important;
                 cursor: not-allowed;
+
+                .showButtons {
+                    display: none;
+                }
             }
         }
 
         &:hover {
-            background: #59646a47 !important;
-            color: #ddf2ff !important;
+            background: #3468F2 !important;
+            position: relative;
+            --spacing: 3%;
+
+            svg {
+                transform: rotate(180deg);
+                transition: cubic-bezier(0.05, 0.99, 0.05, 0.99) all 1.8s;
+            }
+
+            .showButtons {
+                transform: translateX(calc(var(--spacing)* 30.5));
+                margin-left: var(--spacing);
+                position: absolute;
+                top: 0;
+                color: white;
+                z-index: 1000;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                background: var(--Main);
+                outline: 1px solid var(--BorderColor);
+                border-radius: var(--BorderRadius);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: calc(0% - var(--spacing));
+                    width: var(--spacing);
+                    height: -webkit-fill-available;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+.contextButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 20px;
+    color: white !important;
+
+    font-style: normal;
+    width: 260px !important;
+    min-width: fit-content;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+
+    &:first-child {
+        border-radius: var(--BorderRadius) var(--BorderRadius) 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 var(--BorderRadius) var(--BorderRadius);
+    }
+
+    &:last-child:first-child {
+        border-radius: var(--BorderRadius);
+    }
+
+    &:disabled {
+        opacity: 0.5 !important;
+
+        &:hover {
+            background: transparent !important;
+            cursor: not-allowed;
         }
     }
 
-    .hyperLink:hover {
-        background: #41657b47 !important;
-        color: #5bb0ff !important;
+    &:hover {
+        background: #3468F2 !important;
     }
 }

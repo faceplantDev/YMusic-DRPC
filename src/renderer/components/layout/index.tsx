@@ -93,7 +93,7 @@ const Layout: React.FC<p> = ({ title, children, goBack }) => {
                                 }}
                                 className={styles.update_download}
                             >
-                                <MdDownload size={26} />
+                                <MdDownload size={24} />
                             </button>
                         )}
                     </div>
