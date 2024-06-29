@@ -12,10 +12,11 @@ import userContext from '../../api/context/user.context'
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: any
     disabled?: boolean
+    description?: string
     checkType?: string
 }
 
-const Checkbox: React.FC<Props> = ({ children, disabled, checkType }) => {
+const Checkbox: React.FC<Props> = ({ children, disabled, description, checkType }) => {
     const [isActive, setIsActive] = useState(false)
     const { user, setUser, settings, setSettings } = useContext(userContext)
     useEffect(() => {
@@ -85,17 +86,20 @@ const Checkbox: React.FC<Props> = ({ children, disabled, checkType }) => {
         <label
             className={`${styles.checkbox} ${isActive ? styles.active : ''}`}
         >
-            <div className={styles.children_content}>{children}</div>
-            <input
-                className={`${styles.input_checkbox}`}
-                disabled={disabled}
-                type="checkbox"
-                name="checkbox-checked"
-                onChange={handleInputChange}
-            />
-            <div className={styles.custom_checkbox}>
-                <div className={styles.checkbox_slider}></div>
+            <div className={styles.checkboxInner}>
+                <div className={styles.children_content}>{children}</div>
+                <input
+                    className={`${styles.input_checkbox}`}
+                    disabled={disabled}
+                    type="checkbox"
+                    name="checkbox-checked"
+                    onChange={handleInputChange}
+                />
+                <div className={styles.custom_checkbox}>
+                    <div className={styles.checkbox_slider}></div>
+                </div>
             </div>
+            <div className={styles.description}>{description}</div>
         </label>
     )
 }

@@ -73,6 +73,24 @@ const ContextMenu: React.FC = () => {
                     </button>
                 </div>
             </div>
+            <div className={styles.innerFunction}>
+                Особое
+                <ArrowContext />
+                <div className={styles.showButtons}>
+                    <div className={styles.contextButton}>
+                        Beta v1.2.3
+                    </div>
+                    <button className={styles.contextButton}>
+                        Проверить обновление
+                    </button>
+                    <button className={styles.contextButton}>
+                        Скачать "name" в папку музыка
+                    </button>
+                    <button className={styles.contextButton}>
+                        Директория со скаченной музыкой
+                    </button>
+                </div>
+            </div>
             <button className={styles.contextButton}>
                 Выйти
             </button>
