@@ -18,38 +18,8 @@
     --download: #2a3e3900;
     --downloadH: #1b2e2a;
 
-    /* Old */
-
-    --bg: #1b1f21;
-    --color0: #b6c7d2;
-    --color1: #ddf2ff;
-    --color2: #2d3236;
-    --color2H: #282d2f;
-    --color2OffCheck: #89969e;
-    --color3: #394045;
-    --border: #535d64;
-    --borderH: #64737c;
-    --borderRadius: 10px;
-
-
-    /* Style In MainContainer => --m */
-
-    --mInColor: var(--color1);
-    --mColor: #3a4145;
-    --mColorH: #4e595f;
-    --mBorder: var(--border);
-    --mBorderH: var(--borderH);
-
-    --mInColorActive: #ebfff5;
-    --mColorActive: #3a453f;
-    --mColorActiveH: #475850;
-    --mBorderActive: #53645c;
-    --mBorderActiveH: #698276;
-
-    --mTrackColor: #d5d8dc;
-    --mTrackButton: #4e5058;
-    --mTrackBackground: #111214;
-    --mTrackBorder: #394454;
+    /* In panels */
+    --panelsColor: #292C36;
 }
 
 * {
@@ -97,6 +67,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+:focus-visible {
+    outline: 1px double #ffffff;
 }
 
 ::-webkit-scrollbar {
