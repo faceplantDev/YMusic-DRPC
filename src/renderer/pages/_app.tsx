@@ -5,7 +5,6 @@ import UserMeQuery from '../api/queries/user/getMe.query'
 import TrackInfoPage from './trackinfo'
 import ThemePage from './theme'
 import JointPage from './joint'
-import OtherPage from './other'
 
 import { Toaster } from 'react-hot-toast'
 import { CssVarsProvider } from '@mui/joy'
@@ -65,10 +64,6 @@ function app() {
         {
             path: '/joint',
             element: <JointPage />,
-        },
-        {
-            path: '/other',
-            element: <OtherPage />,
         },
     ])
     const authorize = async () => {
