@@ -80,75 +80,162 @@ export default function TrackInfoPage() {
             <div className={styles.page}>
                 <div className={styles.container}>
                     <div className={styles.main_container}>
-                        <Container titleName={'Discord RPC'} imageName={'discord'}>
+                        <Container
+                            titleName={'Discord RPC'}
+                            imageName={'discord'}
+                        >
                             <div className={theme.container}>
                                 <div className={theme.discordRpcSettings}>
                                     <div className={theme.optionalContainer}>
-                                        <div className={theme.optionalTitle}>Обзор</div>
-                                        <CheckboxNav checkType="startDiscordRpc" description='Активируйте этот параметр, чтобы ваш текущий статус отображался в Discord.'>
+                                        <div className={theme.optionalTitle}>
+                                            Обзор
+                                        </div>
+                                        <CheckboxNav
+                                            checkType="startDiscordRpc"
+                                            description="Активируйте этот параметр, чтобы ваш текущий статус отображался в Discord."
+                                        >
                                             Включить статус дискорд
                                         </CheckboxNav>
                                     </div>
                                     <div className={theme.line}></div>
                                     <div className={theme.optionalContainer}>
-                                        <div className={theme.optionalTitle}>Настроить статус</div>
-                                        <div className={theme.textInputContainer}>
+                                        <div className={theme.optionalTitle}>
+                                            Настроить статус
+                                        </div>
+                                        <div
+                                            className={theme.textInputContainer}
+                                        >
                                             <div>Details</div>
-                                            <input type="text" className={theme.styledInput}/>
+                                            <input
+                                                type="text"
+                                                className={theme.styledInput}
+                                            />
                                         </div>
-                                        <div className={theme.textInputContainer}>
+                                        <div
+                                            className={theme.textInputContainer}
+                                        >
                                             <div>State</div>
-                                            <input type="text" className={theme.styledInput}/>
+                                            <input
+                                                type="text"
+                                                className={theme.styledInput}
+                                            />
                                         </div>
-                                        <div className={theme.textInputContainer}>
+                                        <div
+                                            className={theme.textInputContainer}
+                                        >
                                             <div>Button</div>
-                                            <input type="text" className={theme.styledInput}/>
+                                            <input
+                                                type="text"
+                                                className={theme.styledInput}
+                                            />
                                         </div>
-                                        <CheckboxNav checkType="enableRpcButtonListen" description='Активируйте этот параметр, чтобы ваш текущий статус отображался в Discord.'>
+                                        <CheckboxNav
+                                            checkType="enableRpcButtonListen"
+                                            description="Активируйте этот параметр, чтобы ваш текущий статус отображался в Discord."
+                                        >
                                             Включить кнопку (Слушать)
                                         </CheckboxNav>
                                     </div>
                                 </div>
                                 <div className={theme.discordRpc}>
-                                    <img className={theme.userBanner} src="https://media.discordapp.net/attachments/482180995752394752/1256554862364065863/image.png?ex=66813168&is=667fdfe8&hm=b1c13419a7d5b98bcda110db1d3d7f646431f432dbac6839733c85c7f9a62437&=&format=webp" alt="" />
+                                    <img
+                                        className={theme.userBanner}
+                                        src="https://media.discordapp.net/attachments/482180995752394752/1256554862364065863/image.png?ex=66813168&is=667fdfe8&hm=b1c13419a7d5b98bcda110db1d3d7f646431f432dbac6839733c85c7f9a62437&=&format=webp"
+                                        alt=""
+                                    />
                                     <div>
-                                        <img className={theme.userAvatar} src="https://cdn.discordapp.com/avatars/302522186504077312/908f5ce4aeac02fbd29e2e1eeecd66ef" alt="" />
-                                        <div className={theme.userName}>Maks1mio</div>
+                                        <img
+                                            className={theme.userAvatar}
+                                            src="https://cdn.discordapp.com/avatars/302522186504077312/908f5ce4aeac02fbd29e2e1eeecd66ef"
+                                            alt=""
+                                        />
+                                        <div className={theme.userName}>
+                                            Maks1mio
+                                        </div>
                                         <div className={theme.userRPC}>
-                                            <div className={theme.status}>Играет в игру</div>
+                                            <div className={theme.status}>
+                                                Играет в игру
+                                            </div>
                                             <div className={theme.statusRPC}>
                                                 <div>
                                                     {settings.discordRpc &&
-                                                        currentTrack !== trackInitials ? (
-                                                        <div className={theme.flex_container}>
+                                                    currentTrack !==
+                                                        trackInitials ? (
+                                                        <div
+                                                            className={
+                                                                theme.flex_container
+                                                            }
+                                                        >
                                                             <img
-                                                                className={theme.img}
+                                                                className={
+                                                                    theme.img
+                                                                }
                                                                 src={
-                                                                    currentTrack.requestImgTrack[1]
+                                                                    currentTrack
+                                                                        .requestImgTrack[1]
                                                                         ? currentTrack
-                                                                            .requestImgTrack[1]
+                                                                              .requestImgTrack[1]
                                                                         : './static/assets/logo/logoappsummer.png'
                                                                 }
                                                                 alt=""
                                                             />
-                                                            <div className={theme.gap}>
-                                                                <div className={theme.appName}>
+                                                            <div
+                                                                className={
+                                                                    theme.gap
+                                                                }
+                                                            >
+                                                                <div
+                                                                    className={
+                                                                        theme.appName
+                                                                    }
+                                                                >
                                                                     PulseSync
                                                                 </div>
-                                                                <div className={theme.name}>
-                                                                    {currentTrack.playerBarTitle} -{' '}
-                                                                    {currentTrack.artist}
+                                                                <div
+                                                                    className={
+                                                                        theme.name
+                                                                    }
+                                                                >
+                                                                    {
+                                                                        currentTrack.playerBarTitle
+                                                                    }{' '}
+                                                                    -{' '}
+                                                                    {
+                                                                        currentTrack.artist
+                                                                    }
                                                                 </div>
-                                                                <div className={theme.time}>
-                                                                    {currentTrack.timecodes[0]} -{' '}
-                                                                    {currentTrack.timecodes[1]}
+                                                                <div
+                                                                    className={
+                                                                        theme.time
+                                                                    }
+                                                                >
+                                                                    {
+                                                                        currentTrack
+                                                                            .timecodes[0]
+                                                                    }{' '}
+                                                                    -{' '}
+                                                                    {
+                                                                        currentTrack
+                                                                            .timecodes[1]
+                                                                    }
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     ) : (
-                                                        <div className={theme.flex_container}>
-                                                            <Skeleton width={58} height={58} />
-                                                            <div className={theme.gap}>
+                                                        <div
+                                                            className={
+                                                                theme.flex_container
+                                                            }
+                                                        >
+                                                            <Skeleton
+                                                                width={58}
+                                                                height={58}
+                                                            />
+                                                            <div
+                                                                className={
+                                                                    theme.gap
+                                                                }
+                                                            >
                                                                 <Skeleton
                                                                     width={70}
                                                                     height={19}
@@ -166,7 +253,8 @@ export default function TrackInfoPage() {
                                                     )}
                                                 </div>
                                                 <div className={theme.button}>
-                                                    Слушать трек на Яндекс Музыке
+                                                    Слушать трек на Яндекс
+                                                    Музыке
                                                 </div>
                                             </div>
                                         </div>
@@ -177,6 +265,6 @@ export default function TrackInfoPage() {
                     </div>
                 </div>
             </div>
-        </Layout >
+        </Layout>
     )
 }

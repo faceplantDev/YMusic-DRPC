@@ -33,7 +33,7 @@
             padding: 10px 19px;
             width: 100%;
             border: 0;
-            background: #3468F2;
+            background: #3468f2;
             align-items: center;
             justify-content: center;
             gap: 10px;
@@ -42,13 +42,13 @@
             font-size: 14px;
             line-height: 140%;
 
-            color: #FFFFFF;
+            color: #ffffff;
 
             &:disabled {
                 opacity: 0.3 !important;
 
                 &:hover {
-                    background: #3468F2;
+                    background: #3468f2;
                     cursor: not-allowed;
                 }
             }

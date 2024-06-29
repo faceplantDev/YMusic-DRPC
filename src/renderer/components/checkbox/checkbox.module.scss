@@ -13,7 +13,6 @@
     border-radius: 10px;
 
     &:hover {
-
         &:disabled {
             opacity: 0.2;
             background: transparent;
@@ -45,7 +44,7 @@
             font-size: 18px;
             line-height: 140%;
 
-            color: #FFFFFF;
+            color: #ffffff;
         }
 
         .custom_checkbox {
@@ -68,7 +67,7 @@
 
             .checkbox_slider {
                 transition: cubic-bezier(0.05, 0.99, 0.05, 0.99) all 0.1s;
-                
+
                 position: absolute;
                 box-sizing: border-box;
                 display: flex;
@@ -92,7 +91,7 @@
         font-size: 14px;
         line-height: 140%;
 
-        color: #C7C9D2;
+        color: #c7c9d2;
     }
 }
 
@@ -107,8 +106,8 @@
 
     .checkboxInner {
         .custom_checkbox {
-            background: #2D57C7;
-            outline: 1.5px solid #2E64F5;
+            background: #2d57c7;
+            outline: 1.5px solid #2e64f5;
 
             .checkbox_slider {
                 padding: 6px 10px;

@@ -40,7 +40,7 @@ import { getPercent } from './renderer/utils/percentage'
 import os from 'os'
 import { v4 } from 'uuid'
 import TrackInterface from './renderer/api/interfaces/track.interface'
-import {isDev} from "./renderer/api/config";
+import { isDev } from './renderer/api/config'
 
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string
@@ -214,7 +214,7 @@ app.on('ready', async () => {
     })
 })
 app.whenReady().then(async () => {
-    if(isDev) {
+    if (isDev) {
         await session.defaultSession.loadExtension(
             path.join(
                 process.env.LOCALAPPDATA,

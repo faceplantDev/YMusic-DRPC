@@ -42,8 +42,7 @@ export default function AuthPage() {
                             {mdText}
                         </MarkDown>
                         <CheckboxNav checkType="readPolicy">
-                            Я соглашаюсь со всеми выше
-                            перечисленными условиями.
+                            Я соглашаюсь со всеми выше перечисленными условиями.
                         </CheckboxNav>
                     </div>
                     <button

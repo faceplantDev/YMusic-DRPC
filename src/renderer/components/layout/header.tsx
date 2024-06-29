@@ -41,14 +41,19 @@ const Header: React.FC<p> = ({ goBack }) => {
                     <div className={styles.app_menu}>
                         <button
                             className={styles.logoplace}
-                            onClick={toggleMenu}>
+                            onClick={toggleMenu}
+                        >
                             <img
                                 className={styles.logoapp}
                                 src="static/assets/logo/logoapp.svg"
                                 alt=""
                             />
                             <span>PulseSync</span>
-                            <div className={isMenuOpen ? styles.true : styles.false}>
+                            <div
+                                className={
+                                    isMenuOpen ? styles.true : styles.false
+                                }
+                            >
                                 <ArrowDown />
                             </div>
                             {isMenuOpen && <PatchMenu />}
@@ -59,12 +64,17 @@ const Header: React.FC<p> = ({ goBack }) => {
                             <div className={styles.badges_container}>
                                 {user.badges.length > 0 &&
                                     user.badges.map(_badge => (
-                                        <div className={styles.badge} key={_badge.type}>
+                                        <div
+                                            className={styles.badge}
+                                            key={_badge.type}
+                                        >
                                             <img
                                                 src={`static/assets/badges/${_badge.type}.svg`}
                                                 alt={_badge.type}
                                             />
-                                            <span className={styles.tooltip}>{_badge.type}</span>
+                                            <span className={styles.tooltip}>
+                                                {_badge.type}
+                                            </span>
                                         </div>
                                     ))}
                             </div>

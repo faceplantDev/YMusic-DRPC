@@ -48,7 +48,7 @@
             z-index: 0;
         }
 
-        >div {
+        > div {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -81,7 +81,7 @@
                 font-size: 22px;
                 line-height: 30px;
 
-                color: #F2F3F5;
+                color: #f2f3f5;
             }
 
             .userRPC {
@@ -101,7 +101,7 @@
                     font-size: 12px;
                     line-height: 16px;
 
-                    color: #D5D8DC;
+                    color: #d5d8dc;
                 }
 
                 .statusRPC {
@@ -128,7 +128,7 @@
                             --imgSize: 58px;
                             width: var(--imgSize);
                             height: var(--imgSize);
-                            background: #4E5058;
+                            background: #4e5058;
                             border-radius: var(--BorderRadius);
                         }
 
@@ -147,7 +147,7 @@
                                 font-size: 14px;
                                 line-height: 19px;
 
-                                color: #D5D8DC;
+                                color: #d5d8dc;
                             }
 
                             .time,
@@ -159,7 +159,7 @@
                                 flex: none;
                                 overflow: hidden;
                                 white-space: nowrap;
-                                color: #D5D8DC;
+                                color: #d5d8dc;
                                 width: 190px;
                             }
                         }
@@ -185,7 +185,7 @@
                     font-size: 12px;
                     line-height: 16px;
 
-                    color: #FAFAFA;
+                    color: #fafafa;
                 }
             }
         }
@@ -213,7 +213,7 @@
 .line {
     width: -webkit-fill-available;
     height: 1px;
-    background: #3E424C;
+    background: #3e424c;
 }
 
 .textInputContainer {
@@ -224,12 +224,12 @@
     gap: 2px;
     width: -webkit-fill-available;
 
-    >div {
+    > div {
         font-weight: 700;
         font-size: 12px;
         line-height: 140%;
         text-transform: uppercase;
-        color: #ABAFBF;
+        color: #abafbf;
     }
 
     .styledInput {
@@ -241,20 +241,20 @@
 
         width: -webkit-fill-available;
 
-        background: #0D0F14;
-        border: 1px solid #3E424C;
+        background: #0d0f14;
+        border: 1px solid #3e424c;
         border-radius: 4px;
 
         font-weight: 400;
         font-size: 14px;
         line-height: 140%;
 
-        color: #ABAFBF;
+        color: #abafbf;
 
         &:focus {
             color: white;
-            background: #1A1D24;
-            border-color: #5A5E6B;
+            background: #1a1d24;
+            border-color: #5a5e6b;
         }
     }
 }

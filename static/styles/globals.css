@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
-    --Main: #16181E;
-    --MainBG: #1E2027;
+    --Main: #16181e;
+    --MainBG: #1e2027;
 
     --BorderColor: #363944;
     --BorderRadius: 8px;
 
     /* Only Header*/
-    --HeaderBarTextColor: #E4E5EA;
+    --HeaderBarTextColor: #e4e5ea;
 
     /* Only Nav*/
-    --NavigationOnColor: #3E424C;
-    --NavigationIconDefaultSvgColor: #8F94A8;
-    
-    --downloadColor: #75FF9C;
+    --NavigationOnColor: #3e424c;
+    --NavigationIconDefaultSvgColor: #8f94a8;
+
+    --downloadColor: #75ff9c;
     --download: #2a3e3900;
     --downloadH: #1b2e2a;
 
     /* In panels */
-    --panelsColor: #292C36;
+    --panelsColor: #292c36;
 }
 
 * {
@@ -40,11 +40,11 @@ a {
     text-decoration: none;
 }
 
-a.active>button {
+a.active > button {
     background: var(--NavigationOnColor);
     border: none;
 
-    &>svg {
+    & > svg {
         fill: white;
     }
 }

@@ -38,16 +38,31 @@ const ContextMenu: React.FC = () => {
                 Патч
                 <ArrowContext />
                 <div className={styles.showButtons}>
-                    <button onClick={patch} disabled={settings.patched} className={styles.contextButton}>
+                    <button
+                        onClick={patch}
+                        disabled={settings.patched}
+                        className={styles.contextButton}
+                    >
                         Патч
                     </button>
-                    <button onClick={repatch} disabled={!settings.patched} className={styles.contextButton}>
+                    <button
+                        onClick={repatch}
+                        disabled={!settings.patched}
+                        className={styles.contextButton}
+                    >
                         Репатч
                     </button>
-                    <button onClick={depatch} disabled={!settings.patched} className={styles.contextButton}>
+                    <button
+                        onClick={depatch}
+                        disabled={!settings.patched}
+                        className={styles.contextButton}
+                    >
                         Депатч
                     </button>
-                    <button onClick={githubLink} className={styles.contextButton}>
+                    <button
+                        onClick={githubLink}
+                        className={styles.contextButton}
+                    >
                         Скрипт патчера на GitHub
                     </button>
                 </div>
@@ -56,30 +71,22 @@ const ContextMenu: React.FC = () => {
                 Авто-трей
                 <ArrowContext />
                 <div className={styles.showButtons}>
-                    <button className={styles.contextButton}>
-                        Включить
-                    </button>
-                    <button className={styles.contextButton}>
-                        Выключить
-                    </button>
+                    <button className={styles.contextButton}>Включить</button>
+                    <button className={styles.contextButton}>Выключить</button>
                 </div>
             </div>
             <div className={styles.innerFunction}>
                 Размер интерфейса
                 <ArrowContext />
                 <div className={styles.showButtons}>
-                    <button className={styles.contextButton}>
-                        Скоро
-                    </button>
+                    <button className={styles.contextButton}>Скоро</button>
                 </div>
             </div>
             <div className={styles.innerFunction}>
                 Особое
                 <ArrowContext />
                 <div className={styles.showButtons}>
-                    <div className={styles.contextButton}>
-                        Beta v1.2.3
-                    </div>
+                    <div className={styles.contextButton}>Beta v1.2.3</div>
                     <button className={styles.contextButton}>
                         Проверить обновление
                     </button>
@@ -91,9 +98,7 @@ const ContextMenu: React.FC = () => {
                     </button>
                 </div>
             </div>
-            <button className={styles.contextButton}>
-                Выйти
-            </button>
+            <button className={styles.contextButton}>Выйти</button>
         </div>
     )
 }

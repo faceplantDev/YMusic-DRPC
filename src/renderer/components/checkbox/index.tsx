@@ -16,7 +16,12 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     checkType?: string
 }
 
-const Checkbox: React.FC<Props> = ({ children, disabled, description, checkType }) => {
+const Checkbox: React.FC<Props> = ({
+    children,
+    disabled,
+    description,
+    checkType,
+}) => {
     const [isActive, setIsActive] = useState(false)
     const { user, setUser, settings, setSettings } = useContext(userContext)
     useEffect(() => {
