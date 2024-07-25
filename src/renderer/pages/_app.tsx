@@ -5,6 +5,7 @@ import UserMeQuery from '../api/queries/user/getMe.query'
 import TrackInfoPage from './trackinfo'
 import ExtensionPage from './extension'
 import JointPage from './joint'
+import Syncwave from './syncwave'
 
 import { Toaster } from 'react-hot-toast'
 import { CssVarsProvider } from '@mui/joy'
@@ -48,7 +49,8 @@ function app() {
     const router = createHashRouter([
         {
             path: '/',
-            element: <AuthPage />,
+            // element: <AuthPage />,
+            element: <TrackInfoPage />,
         },
         {
             path: '/auth/callback',
@@ -65,6 +67,10 @@ function app() {
         {
             path: '/joint',
             element: <JointPage />,
+        },
+        {
+            path: '/syncwave',
+            element: <Syncwave />,
         },
     ])
     const authorize = async () => {

@@ -1,0 +1,148 @@
+.card {
+    transition: ease-in-out all 0.2s;
+
+    width: -webkit-fill-available;
+    border-radius: 8px;
+    background: var(--panelsColor);
+    outline: 1px solid var(--BorderColor);
+    padding: 0;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+
+    .cardContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 10px;
+
+        .containerDetail {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 10px;
+
+            .icon {
+                border-radius: 8px;
+            }
+
+            .themeDetals {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 2px;
+                display: grid;
+
+                .nameRoom {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 140%;
+
+                    color: #ffffff;
+
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: 100%;
+                }
+
+                .trackMetadataPlay,
+                .trackMetadataStop {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 14px;
+                    line-height: 19px;
+
+                }
+
+                .trackMetadataPlay {
+                    color: #80FF60;
+                }
+
+                .trackMetadataStop {
+                    color: #9360FF;
+                }
+            }
+        }
+
+        .themeVerStar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 0px;
+            gap: 5px;
+
+            .star {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0px;
+                gap: 4px;
+
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 140%;
+
+                color: #ffd333;
+            }
+        }
+    }
+
+    .cardContainerTab {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 15px;
+
+        border-top: 1px solid var(--BorderColor);
+
+        .leftTab {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 15px;
+        }
+
+        label {
+            gap: 0;
+            width: fit-content;
+
+            div {
+                gap: 0;
+                width: fit-content;
+            }
+        }
+    }
+
+    &:hover {
+        background: #333745;
+        outline: 1px solid #4d536b;
+    }
+}
+
+.tabDetail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+
+    color: #e4e5ea;
+}

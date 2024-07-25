@@ -11,6 +11,7 @@ import Header from './header'
 import ButtonNav from '../button_nav'
 import Discord from './../../../../static/assets/icons/discord.svg'
 import {
+    MdArchitecture,
     MdConnectWithoutContact,
     MdDownload,
     MdEngineering,
@@ -118,6 +119,20 @@ const Layout: React.FC<p> = ({ title, children, goBack }) => {
                             <ButtonNav disabled>
                                 <MdConnectWithoutContact size={24} />
                             </ButtonNav>
+                            <NavLink
+                                to="/syncwave"
+                                className={({ isActive, isPending }) =>
+                                    isPending
+                                        ? 'pending'
+                                        : isActive
+                                            ? 'active'
+                                            : ''
+                                }
+                            >
+                                <ButtonNav>
+                                    <MdArchitecture size={24} />
+                                </ButtonNav>
+                            </NavLink>
                         </div>
                         {updateAvailable && (
                             <button
